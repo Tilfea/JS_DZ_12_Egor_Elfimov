@@ -100,11 +100,11 @@ for (let i = arr4.indexOf(0); i < arr4.lastIndexOf(0); i++){
 }
 document.write(`Сумма чисел между первым и последним нулями в массиве равна ${total1}`)
 
-// document.write('<br/><p><strong>Одинадцатое задание</strong></p><p>*** Нарисовать равнобедренный треугольник из символов ^. Высоту выбирает пользователь. Например: высота = 5, на экране:</p>')
-// function triangle(n){
-//     for (i = 0; i < n; i++){
-//         document.write(' ' * (n - 1 - i) + '^' * (1 + i * 2))
-//     }
-// }
-// let n = 5
-// triangle(n)
+document.write('<br/><p><strong>Одинадцатое задание</strong></p><p>*** Нарисовать равнобедренный треугольник из символов ^. Высоту выбирает пользователь. Например: высота = 5, на экране:</p>')
+document.write('Вывод в console.log')
+let height = 5
+let a = ' ';
+let b = '^';
+for (i = 0; i < height; i++){
+    console.log(a.repeat(height - 1 - i), b.repeat(i*2+1))
+}
