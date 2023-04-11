@@ -108,3 +108,24 @@ let b = '^';
 for (i = 0; i < height; i++){
     console.log(a.repeat(height - 1 - i), b.repeat(i*2+1))
 }
+
+document.write('<br/><p><strong>Задание с прошлого классного занятия</strong></p><p>*** Вытащить все значения из могоуровневых подмассивов массива [2, [a, b, c, [x, y, z]], 6, 8, [1, 2, 7, [a, b, c, [x, y, z]]], 45, 88] </p>')
+
+let arr6 = [2, ['a', 'b', 'c', ['x', 'y', 'z']], 6, 8, [1, 2, 7, ['a', 'b', 'c', ['x', 'y', 'z']]], 45, 88]
+let total2 = []
+
+while (true) {
+    let Flag = true;
+    for (i = 0; i < arr6.length; i++) {
+        if (Array.isArray(arr6[i])) {
+            total2 = total2.concat(arr6[i])
+            Flag = false;
+        } else {
+            total2.push(arr6[i])
+        }
+    }
+    if (Flag == true) {
+        break;
+    } else (arr6 = total2.slice(0), total2 = [])
+}
+document.write(arr6)
